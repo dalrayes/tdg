@@ -1,7 +1,7 @@
 class CreateRecipients < ActiveRecord::Migration
   def change
     create_table :recipients do |t|
-    	t.references :user
+    	t.integer :giver_id
       t.string :name
       t.integer :age
       t.string :gender
