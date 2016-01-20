@@ -7,6 +7,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_hash
       t.string :gender
       t.string :giftr_news
+
+      t.timestamps
     end
   end
 end
