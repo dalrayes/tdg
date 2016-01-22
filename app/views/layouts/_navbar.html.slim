@@ -1,8 +1,9 @@
 .top-bar
   .top-bar-left
     ul.dropdown.menu[data-dropdown-menu]
-      li
-        = image_tag("/assets/Giftr_Logo.png", )
+      li      
+        = link_to root_path do
+          = image_tag '/assets/Giftr_Logo.png'
       li.has-submenu
         a[href="#"]
           | Explore

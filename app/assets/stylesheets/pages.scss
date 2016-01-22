@@ -26,7 +26,14 @@ box-shadow: 0px 2px 5px 0px #e6e6e6;
   color: white; 
 }
 .top-bar img {
-  position: relative;
   max-height: 50%;
-  margin-right: 2em;
+}
+.top-bar-left ul li:first-child a {
+  height: 100%;
+}
+@-moz-document url-prefix() {
+    .top-bar img {
+      max-height: 50%;
+      width: 50%;
+    }
 }
