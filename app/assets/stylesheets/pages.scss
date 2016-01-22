@@ -20,7 +20,13 @@
   -webkit-box-shadow: 0px 2px 5px 0px #e6e6e6;//medium gray
 -moz-box-shadow: 0px 2px 5px 0px #e6e6e6;
 box-shadow: 0px 2px 5px 0px #e6e6e6;
+  font-size: .9rem;
 }
 .top-bar a.white {
   color: white; 
+}
+.top-bar img {
+  position: relative;
+  max-height: 50%;
+  margin-right: 2em;
 }

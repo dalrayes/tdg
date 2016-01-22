@@ -1,32 +1,29 @@
 .top-bar
   .top-bar-left
-    ul.dropdown.menu
+    ul.dropdown.menu[data-dropdown-menu]
       li
-        img
+        = image_tag("/assets/Giftr_Logo.png", )
       li.has-submenu
         a[href="#"]
           | Explore
-        ul.submenu.menu.vertical
+        ul.submenu.menu.vertical[data-submenu]
           li
             a[href="#"]
               | About (coming soon)
           li
             a[href="#"]
               | Blog (coming soon)
-      - if user_signed_in?
-        li
-          | Logged in as:
-          strong
-            = current_user.email
   .top-bar-right
     ul.menu
-      - if user_signed_in?     
+      - if user_signed_in?  
         li
-          button.button.hollow.round[type="button"]
-            = link_to 'Edit profile', edit_user_registration_path
+          | Logged in as 
+          strong
+            = current_user.email
         li
-          button.button.round.margin-left[type="button"]
-            = link_to 'Logout', destroy_user_session_path, method: :delete
+          = link_to 'Edit Profile', edit_user_registration_path, class: 'button hollow round margin-left'
+        li
+          = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'button round margin-left white' 
       - else
         li
           = link_to 'Log In', new_user_session_path, class: 'button hollow round' 
