@@ -22,15 +22,13 @@
     ul.menu
       - if user_signed_in?     
         li
-          button.button.hollow.round.margin-sides[type="button"]
+          button.button.hollow.round[type="button"]
             = link_to 'Edit profile', edit_user_registration_path
         li
           button.button.round.margin-left[type="button"]
             = link_to 'Logout', destroy_user_session_path, method: :delete
       - else
         li
-          button.button.hollow.round.margin-sides[type="button"]
-            = link_to 'Login', new_user_session_path
+          = link_to 'Log In', new_user_session_path, class: 'button hollow round' 
         li 
-          button.button.round.margin-left[type="button"]
-            = link_to 'Sign Up', new_user_registration_path
+          = link_to 'Sign Up', new_user_registration_path, class: 'button round margin-left white'
