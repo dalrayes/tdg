@@ -27,6 +27,8 @@ gem 'foundation-rails'
 #
 #gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'slim-rails'
+# Font awesome
+gem 'font-awesome-rails'
 
 gem 'devise'
 # Use ActiveModel has_secure_password
