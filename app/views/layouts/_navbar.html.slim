@@ -17,14 +17,14 @@
   .top-bar-right
     ul.menu
       - if user_signed_in?  
-        li
+        li.dark-gray
           | Logged in as 
           strong
             = current_user.email
         li
           = link_to 'Edit Profile', edit_user_registration_path, class: 'button hollow round margin-left'
         li
-          = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'button round margin-left white' 
+          = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'button round hollow margin-left' 
       - else
         li
           = link_to 'Log In', new_user_session_path, class: 'button hollow round' 
