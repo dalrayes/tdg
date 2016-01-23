@@ -28,12 +28,10 @@ h2 Sign up
     = f.number_field :age, placeholder: "Age"
   .field
     = f.radio_button :gender, 'male'
-    = f.label 'gender', 'Male'
     = f.radio_button :gender, 'female'
     = f.label 'gender', 'Female'
-    = f.radio_button :gender, 'female'
+    = f.radio_button :gender, 'other'
     = f.label 'gender', 'Other'
-    = f.text_field :gender, placeholder: "Other"
   .actions
     = f.submit "Sign up"
 = render "devise/shared/links"
