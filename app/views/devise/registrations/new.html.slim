@@ -28,10 +28,14 @@ h2 Sign up
     = f.number_field :age, placeholder: "Age"
   .field
     = f.radio_button :gender, 'male'
+    = f.label 'gender', 'Male'
     = f.radio_button :gender, 'female'
     = f.label 'gender', 'Female'
     = f.radio_button :gender, 'other'
     = f.label 'gender', 'Other'
+  .field
+    = f.check_box :giftr_news
+    = f.label :giftr_news, "Please send me updates about Giftr"
   .actions
-    = f.submit "Sign up"
+    = f.submit "Start Gifting"
 = render "devise/shared/links"
