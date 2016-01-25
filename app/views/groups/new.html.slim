@@ -1,0 +1,35 @@
+h2 Add Your Occasion
+
+h5 Existing Users
+.button.round
+ 	| Log in to access your existing occasions
+
+h5 New to Giftr?
+.button.round
+	| Proceed without logging in 
+
+h5 Who is the gift for?
+.button.round
+	| Add from Facebook
+.button.round
+	| Add from Google
+.button.round
+	| Add a new recipient
+
+//Move to partial
+= form_for :recipient do |f|
+	.field
+		= f.label "First Name"
+		= f.text_field :first_name
+	.field
+		= f.label "Last Name"
+		= f.text_field :last_name
+	.field
+	 	= f.radio_button :gender, 'male'
+    	= f.label 'gender', 'Male'
+    	= f.radio_button :gender, 'female'
+    	= f.label 'gender', 'Female'
+   		= f.radio_button :gender, 'other'
+    	= f.label 'gender', 'Other'
+	.field
+		= f.label "Relationship"
