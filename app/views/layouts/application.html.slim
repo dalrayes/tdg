@@ -14,4 +14,7 @@ html[lang="en"]
       = notice
     /p.alert
       = alert
-    = yield
+    - if user_signed_in? 
+      = render partial: 'layouts/sidebar'
+    - else
+      = yield

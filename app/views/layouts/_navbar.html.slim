@@ -1,15 +1,12 @@
 - if user_signed_in? 
-  .title-bar.center[data-responsive-toggle="small-menu", data-hide-for="medium"]
-    button.menu-icon.float-left[type="button", data-toggle]
+  .title-bar.center[data-responsive-toggle="offCanvas" data-hide-for="medium"]
+    button.menu-icon.float-left[type="button", data-toggle="offCanvas"]
     = link_to root_path do
       = image_tag '/assets/Giftr_Logo.png'
     ul.menu.float-right
       li
         = link_to edit_user_registration_path do
           i.fa.fa-cog
-  /transform this element into off-canvas sidebar
-  div.hide-for-medium[id="small-menu"]
-    | Test
 - else
   .title-bar[data-hide-for="medium"]
     = image_tag '/assets/Giftr_Logo.png'
@@ -18,8 +15,6 @@
         = link_to 'Join', new_user_registration_path, class: 'button small white'
       li
         = link_to 'Log In', new_user_session_path, class: 'button hollow small margin-left'
-  
-    
 .top-bar.hide-for-small-only
   .top-bar-left
     ul.dropdown.menu[data-dropdown-menu]
@@ -46,8 +41,6 @@
         li
           = link_to edit_user_registration_path do
             i.fa.fa-cog
-        li
-          = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'button round hollow' 
       - else
         li 
           = link_to 'Join', new_user_registration_path, class: 'button round white'

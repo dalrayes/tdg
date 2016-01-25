@@ -1,0 +1,14 @@
+.off-canvas-wrapper
+  .off-canvas-wrapper-inner[data-off-canvas-wrapper]
+    .off-canvas.position-left[id="offCanvas", data-off-canvas]
+      ul.mobile-ofc.vertical.menu
+        li
+          a href="#"
+            | Home
+        li
+          a href="#"
+            | About
+        li
+          = link_to 'Sign Out', destroy_user_session_path, method: :delete 
+    .off-canvas-content[data-off-canvas-content]
+      = yield
