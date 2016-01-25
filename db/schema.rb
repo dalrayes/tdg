@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160120184950) do
+ActiveRecord::Schema.define(version: 20160125161046) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "groups", force: :cascade do |t|
+    t.integer  "owner_id"
+    t.integer  "occasion_id"
+    t.string   "group_status"
+    t.string   "custom_url"
+    t.text     "description"
+    t.text     "custom_message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "occasions", force: :cascade do |t|
     t.integer  "recipient_id"
@@ -31,6 +42,15 @@ ActiveRecord::Schema.define(version: 20160120184950) do
     t.integer  "age"
     t.string   "gender"
     t.string   "relationship"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_groups", force: :cascade do |t|
+    t.integer  "member_id"
+    t.integer  "group_id"
+    t.string   "member_status"
+    t.string   "member_notication"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

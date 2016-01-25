@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 	has_many :recipients, foreign_key: :giver_id
   has_many :occasions, through: :recipients
-  has_many :user_groups
+  has_many :user_groups, foreign_key: :member_id
   has_many :groups, through: :user_groups
 end
