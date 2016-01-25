@@ -1,0 +1,41 @@
+h2 Sign up 
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = devise_error_messages!
+  .button.round
+    | Sign in with Facebook
+  .button.round
+    | Sign in with Google
+    
+  h5 -OR- 
+
+  .field
+    = f.email_field :email, autofocus: true, placeholder: "Email address"
+  .field
+    = f.password_field :password, autocomplete: "off", placeholder: "Create a password"
+    - if @minimum_password_length
+      em
+        | (
+        = @minimum_password_length
+        |  characters minimum)
+  
+  p Just a few more details
+
+  .field
+    = f.text_field :first_name, placeholder: "First Name"
+  .field
+    = f.text_field :last_name, placeholder: "Last Name"
+  .age
+    = f.number_field :age, placeholder: "Age"
+  .field
+    = f.radio_button :gender, 'male'
+    = f.label 'gender', 'Male'
+    = f.radio_button :gender, 'female'
+    = f.label 'gender', 'Female'
+    = f.radio_button :gender, 'other'
+    = f.label 'gender', 'Other'
+  .field
+    = f.check_box :giftr_news
+    = f.label :giftr_news, "Please send me updates about Giftr"
+  .actions
+    = f.submit "Start Gifting"
+= render "devise/shared/links"

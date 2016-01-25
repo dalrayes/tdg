@@ -1,4 +1,5 @@
 //Global
+
 .button.radius, .button.radius {
     border-radius: 3px;
 }
@@ -8,11 +9,41 @@
 .margin-left {
   margin-left: 1em;
 }
+.medium-gray {
+  color: #cacaca;
+}
+.dark-gray {
+  color: #8a8a8a;
+}
 
 //Custom
-.header {
-  color: blue !important;
-}
 .test {
-  background-color: blueviolet !important;
+  color: gray;
+}
+
+//Navbar
+.top-bar {
+  -webkit-box-shadow: 0px 2px 5px 0px #e6e6e6;//medium gray
+-moz-box-shadow: 0px 2px 5px 0px #e6e6e6;
+box-shadow: 0px 2px 5px 0px #e6e6e6;
+  font-size: .9rem;
+}
+.top-bar a.white {
+  color: white; 
+}
+.top-bar img {
+  max-height: 50%;
+}
+.top-bar-left ul li:first-child a {
+  height: 100%;
+}
+@-moz-document url-prefix() {
+    .top-bar img {
+      max-height: 50%;
+      width: 50%;
+    }
+}
+.top-bar-right ul {
+  padding: 0.35rem 0.35rem;
+  line-height: 1;
 }
