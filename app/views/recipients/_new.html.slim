@@ -1,0 +1,20 @@
+= form_for :recipient do |f|
+	.field
+		= f.label "First Name"
+		= f.text_field :first_name
+	.field
+		= f.label "Last Name"
+		= f.text_field :last_name
+	.field
+		= f.label "Age"
+		= f.text_field :age
+	.field
+	 	= f.radio_button :gender, 'male'
+    	= f.label 'gender', 'Male'
+    	= f.radio_button :gender, 'female'
+    	= f.label 'gender', 'Female'
+   		= f.radio_button :gender, 'other'
+    	= f.label 'gender', 'Other'
+	.field
+		= f.label "Relationship"
+		=	f.select :relationship, [['Parent', 'parent'], ['Sibling', 'sibling'], ['Spouse', 'spouse']]
