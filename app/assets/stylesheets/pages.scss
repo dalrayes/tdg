@@ -1,7 +1,23 @@
 //Global
-body {
-  background-color: #e6e6e6;//light-gray
-}
+$shade: #211F30;
+$cerulean-blue: #217CA3;
+$asphalt: #32384D;
+$mustard: #e29930;
+$lightblue: #0066ff;//Giftr logo color
+$blue: #000066;//Giftr logo color
+
+//Foundation Colors
+$primary-color: #2199e8;
+$secondary-color: #777;
+$success-color: #3adb76;
+$warning-color: #ffae00;
+$alert-color: #ec5840;
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$black: #0a0a0a;
+$white: #fefefe;
+
 .button.radius, .button.radius {
     border-radius: 3px;
 }
@@ -24,13 +40,13 @@ body {
   text-align: center;
 }
 .white {
-  color: white;
-}
-.blue {
-  color: #000066;
+  color: $white;
 }
 .lightblue {
-  color: #0066ff;
+  color: $lightblue;
+}
+.blue {
+  color: $blue;
 }
 .centered {///MOVE THIS
   display: table-cell;
@@ -42,12 +58,20 @@ body {
 }
 
 //Navbar
+nav.column {
+  position: fixed;
+  top: 0;
+  z-index: 1030;
+  padding: 0;
+}
 .top-bar {
-  -webkit-box-shadow: 0px 2px 5px 0px #e6e6e6;//medium gray
-  -moz-box-shadow: 0px 2px 5px 0px #e6e6e6;
-  box-shadow: 0px 2px 5px 0px #e6e6e6;
+  -webkit-box-shadow: 0px 2px 5px 0px $light-gray;
+  -moz-box-shadow: 0px 2px 5px 0px $light-gray;
+  box-shadow: 0px 2px 5px 0px $light-gray;
   font-size: .9rem;
-  z-index: 10;
+  
+//  position: fixed;
+//  top: 0;
 }
 .top-bar a.white {
   color: white; 
@@ -58,7 +82,7 @@ body {
 .top-bar-left ul li:first-child a {
   height: 100%;
 } 
-@-moz-document url-prefix() {//logo to be correct size
+@-moz-document url-prefix() {//logo correct size
     .top-bar img {
       max-height: 50%;
       width: 50%;
@@ -70,19 +94,19 @@ body {
 }
 .title-bar {
   background-color: white;
-  -webkit-box-shadow: 0px 2px 5px 0px #e6e6e6;//medium gray
-  -moz-box-shadow: 0px 2px 5px 0px #e6e6e6;
-  box-shadow: 0px 2px 5px 0px #e6e6e6;
+  -webkit-box-shadow: 0px 2px 5px 0px $light-gray;
+  -moz-box-shadow: 0px 2px 5px 0px $light-gray;
+  box-shadow: 0px 2px 5px 0px $light-gray;
   font-size: .9rem;
 }
 .title-bar .menu-icon {
   top: 4px;//vertical align off when float-left
 }
 .title-bar .menu-icon:after {
-  background: #0066ff;//lightblue
+  background: $lightblue;
 }
 .title-bar .menu-icon::after {
-  box-shadow: 0 7px 0 #0066ff, 0 14px 0 #0066ff;//lightblue
+  box-shadow: 0 7px 0 $lightblue, 0 14px 0 $lightblue;
 }
 .title-bar img {
   max-height: 25px;
@@ -100,16 +124,16 @@ body {
 
 //Sidebar
 ul.mobile-ofc.vertical.menu li:last-child {
-  border-bottom: 1px solid #2199e8;//primarycolor
+  border-bottom: 1px solid $primary-color;
 }
 
 //Index
 .cover {
-  background-image: image-url("Giftr_coverphoto.jpg");
+  background-image: image-url("Giftr_coverphoto2.jpg");
 //  background-image: url("https://s3.amazonaws.com/giftrassets/LandingPage/Giftr_coverphoto.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom  ;
   position: relative;
 //  min-height: 100vh;
 //  margin-top: -67px;//height of navbar
@@ -119,3 +143,6 @@ ul.mobile-ofc.vertical.menu li:last-child {
   display: block;
   margin: auto;
 }
+//.test {
+//  color: $test-color;
+//}
