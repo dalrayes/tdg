@@ -29,7 +29,6 @@ gem 'foundation-rails'
 gem 'slim-rails'
 # Font awesome
 gem 'font-awesome-rails'
-gem 'bootstrap-social-rails'
 
 gem 'devise'
 # Use ActiveModel has_secure_password
