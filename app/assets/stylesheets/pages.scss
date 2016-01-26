@@ -208,4 +208,50 @@ ul.mobile-ofc.vertical.menu li:last-child {
   background-color: darken( $stoneground, 15% );
   color: $medium-gray;
   font-size: 80%;
+  padding: 1rem;
+}
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+.list-inline li {
+  display: inline-block;
+  padding: 0 5px;
+  margin: 1rem 0 1rem;
+}
+.social-icons .fa {
+  font-size: 1.8em;
+}
+.social-icons .fa {
+  width: 1.6em;
+  height: 1.6em;
+  line-height: 1.6em;
+  text-align: center;
+  color: #FFF;
+  color: rgba(255, 255, 255, 0.8);
+}
+.social-icons.icon-rounded .fa{
+  border-radius: 3px;
+}
+.social-icons .fa:hover, .social-icons .fa:active {
+  color: #FFF;
+  -webkit-box-shadow: 1px 1px 3px #333;
+  -moz-box-shadow: 1px 1px 3px #333;
+  box-shadow: 1px 1px 3px #333; 
+}
+.social-icons .fa-facebook {
+  background-color: #3c599f;
+}
+.social-icons .fa-twitter {
+  background-color: #00aced;
+}
+.social-icons .fa-youtube {
+  background-color: #C52F30;
+}
+.social-icons .fa-google-plus {
+  background-color: #CF3D2E;
+}
+.social-icons .fa-envelope {
+  background-color: #229ACC;
 }
