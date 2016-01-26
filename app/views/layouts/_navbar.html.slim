@@ -12,12 +12,13 @@
 - else
   nav.column.row
     .title-bar.show-for-small-only[data-hide-for="medium"]
-      = image_tag '/assets/Giftr_Logo.png'
+      = link_to root_path do
+        = image_tag '/assets/Giftr_Logo.png'
       ul.menu
         li 
-          = link_to 'Join', new_user_registration_path, class: 'button small white'
+          = link_to 'Join', new_user_registration_path, class: 'button small radius white'
         li
-          = link_to 'Log In', new_user_session_path, class: 'button hollow small margin-left'
+          = link_to 'Log In', new_user_session_path, class: 'button hollow radius small margin-left'
 //large navbar
 nav.column.row
   .top-bar.hide-for-small-only
@@ -48,6 +49,6 @@ nav.column.row
               i.fa.fa-cog
         - else
           li 
-            = link_to 'Join', new_user_registration_path, class: 'button round white'
+            = link_to 'Join', new_user_registration_path, class: 'button radius white'
           li
-            = link_to 'Log In', new_user_session_path, class: 'button hollow round margin-left'
+            = link_to 'Log In', new_user_session_path, class: 'button hollow radius margin-left'
