@@ -17,4 +17,6 @@ html[lang="en"]
     - if user_signed_in? 
       = render partial: 'layouts/sidebar'
     - else
-      = yield
+      .wrapper
+        = yield
+    = render partial: 'layouts/footer'

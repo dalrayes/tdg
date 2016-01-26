@@ -34,7 +34,7 @@ $black: #0a0a0a;
 $white: #fefefe;
 
 body {
-  padding-top: 67px;//navbar height
+//  padding-top: 67px;//navbar height
 }
 .jumbotron {
   padding: 3rem;
@@ -52,9 +52,6 @@ body {
 }
 .w500 {
   font-weight: 600;
-}
-.center {
-  text-align: center;
 }
 .white {
   color: $white;
@@ -89,7 +86,10 @@ body {
 .stonegroud {
   color: $stoneground;
 }
-
+.wrapper {
+  min-height: 100vh;
+  padding-top: 67px;
+}
 .button.radius {
     border-radius: 3px;
 }
@@ -140,10 +140,10 @@ nav.column {
   top: 4px;//vertical align off when float-left
 }
 .title-bar .menu-icon:after {
-  background: $lightblue;
+  background: $lapis;
 }
 .title-bar .menu-icon::after {
-  box-shadow: 0 7px 0 $lightblue, 0 14px 0 $lightblue;
+  box-shadow: 0 7px 0 $lapis, 0 14px 0 $lapis;
 }
 .title-bar img {
   max-height: 25px;
@@ -185,6 +185,9 @@ ul.mobile-ofc.vertical.menu li:last-child {
   margin: 0 auto;
   display: block;
 }
+.index .jumbotron {
+  padding-top: 115px;//adjust for navbar
+}
 .index .jumbotron>div {
   background-color: rgba($peppercorn, 0.65);
   padding: 2rem;
@@ -192,11 +195,17 @@ ul.mobile-ofc.vertical.menu li:last-child {
 //  border: 1px solid blue;
   border-radius: 3px;
 }
-.index button {
-  
-}
 @media screen and (max-width: 39.9375em) {
   .index.imagecover {
     margin-top: -41px;//navbar height
   }
+  .index .jumbotron {
+    padding-top: 71px;//adjust for navbar
+  }
+}
+//Footer
+.footer {
+  background-color: darken( $stoneground, 15% );
+  color: $medium-gray;
+  font-size: 80%;
 }

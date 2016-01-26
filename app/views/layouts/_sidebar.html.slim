@@ -11,4 +11,5 @@
         li
           = link_to 'Sign Out', destroy_user_session_path, method: :delete 
     .off-canvas-content[data-off-canvas-content]
-      = yield
+      .wrapper
+        = yield
