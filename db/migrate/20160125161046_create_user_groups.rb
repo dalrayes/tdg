@@ -4,7 +4,7 @@ class CreateUserGroups < ActiveRecord::Migration
     	t.integer :member_id
     	t.references :group
     	t.string :member_status
-    	t.string :member_notication
+    	t.string :member_notification
 
     	t.timestamps
     end
