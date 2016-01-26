@@ -1,13 +1,28 @@
 //Global
-$shade: #211F30;
-$cerulean-blue: #217CA3;
-$asphalt: #32384D;
-$mustard: #e29930;
+//$shade: #211F30;
+//$cerulean-blue: #217CA3;
+//$asphalt: #32384D;
+//$mustard: #e29930;
+//
+//$night: #000b29;
+//$phonebooth: #d70026;
+$pearl: #f8f5f2;
+//$flash: #edb83d;
+
+//$cyan: #00cffa;
+//$magenta: #ff0038;
+//$yellow: #ffce38;
+$black: #020509;
+
+$lapis: #556dac;
+$salmon: #f79b77;
+$peppercorn: #755248;
+$stoneground: #4b4345;
+
 $lightblue: #0066ff;//Giftr logo color
 $blue: #000066;//Giftr logo color
 
 //Foundation Colors
-$primary-color: #2199e8;
 $secondary-color: #777;
 $success-color: #3adb76;
 $warning-color: #ffae00;
@@ -56,6 +71,25 @@ body {
 .dark-gray {
   color: $dark-gray;
 }
+.pearl {
+  color: $pearl;
+}
+.black {
+  color: $black;
+}
+.lapis {
+  color: $lapis;
+}
+.salmon {
+  color: $salmon;
+}
+.peppercorn {
+  color: $peppercorn;
+}
+.stonegroud {
+  color: $stoneground;
+}
+
 .button.radius {
     border-radius: 3px;
 }
@@ -127,12 +161,12 @@ nav.column {
 
 //Sidebar
 ul.mobile-ofc.vertical.menu li:last-child {
-  border-bottom: 1px solid $primary-color;
+  border-bottom: 1px solid $lightblue;
 }
 
 //Index
-.imagecover {
-  background-image: image-url("Giftr_coverphoto2.jpg");
+.index.imagecover {
+  background-image: image-url("Bear.jpg");
 //  background-image: url("https://s3.amazonaws.com/giftrassets/LandingPage/Giftr_coverphoto.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -140,15 +174,29 @@ ul.mobile-ofc.vertical.menu li:last-child {
   position: relative;
   margin-top: -67px;//navbar height
 }
-.centered {
+.index .centered {
   display: table-cell;
   vertical-align: middle;
   height: 100vh;
   position: relative;
   width: 100vw;
 }
+.index .centered .row .button {
+  margin: 0 auto;
+  display: block;
+}
+.index .jumbotron>div {
+  background-color: rgba($peppercorn, 0.45);
+  padding: 2rem;
+  margin-top: 4rem;
+//  border: 1px solid blue;
+  border-radius: 3px;
+}
+.index button {
+  
+}
 @media screen and (max-width: 39.9375em) {
-  .imagecover {
+  .index.imagecover {
     margin-top: -41px;//navbar height
   }
 }
