@@ -105,9 +105,9 @@ nav.column {
   padding: 0;
 }
 .top-bar {
-  -webkit-box-shadow: 0px 2px 5px 0px $light-gray;
-  -moz-box-shadow: 0px 2px 5px 0px $light-gray;
-  box-shadow: 0px 2px 5px 0px $light-gray;
+  -webkit-box-shadow: 0px 2px 5px 0px $stoneground;
+  -moz-box-shadow: 0px 2px 5px 0px $stoneground;
+  box-shadow: 0px 2px 5px 0px $stoneground;
   font-size: .9rem;
 }
 .top-bar a.white {
@@ -131,9 +131,9 @@ nav.column {
 }
 .title-bar {
   background-color: white;
-  -webkit-box-shadow: 0px 2px 5px 0px $light-gray;
-  -moz-box-shadow: 0px 2px 5px 0px $light-gray;
-  box-shadow: 0px 2px 5px 0px $light-gray;
+  -webkit-box-shadow: 0px 2px 5px 0px $stoneground;
+  -moz-box-shadow: 0px 2px 5px 0px $stoneground;
+  box-shadow: 0px 2px 5px 0px $stoneground;
   font-size: .9rem;
 }
 .title-bar .menu-icon {
@@ -186,7 +186,7 @@ ul.mobile-ofc.vertical.menu li:last-child {
   display: block;
 }
 .index .jumbotron>div {
-  background-color: rgba($peppercorn, 0.45);
+  background-color: rgba($peppercorn, 0.65);
   padding: 2rem;
   margin-top: 4rem;
 //  border: 1px solid blue;
