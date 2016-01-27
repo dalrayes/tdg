@@ -6,26 +6,46 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-user = User.create!(
+test_user = User.create!(
 	first_name:"Dalal",
 	last_name: "Alrayes",
 	age: 21,
 	email: 'test@example.com',
 	password: 'password',
 	gender: 'female',
-	giftr_news: 'yes')
+	giftr_news: 'yes'
+	)
 
-recipient = Recipient.create(
+recipient = Recipient.create!(
 	name:"Tatyana",
-	giver: user,
+	giver: test_user,
 	age:21,
 	gender:'female',
 	relationship:'friend',
 	)
 
-Occasion.create(
+occasion = Occasion.create!(
 	recipient: recipient,
 	date: '2016-02-03',
 	occasion_type:"birthday",
 	reminder: 'yes'
 	)
+
+group= Group.create!(
+	owner: test_user,
+	occasion: occasion,
+	group_status: 'open',
+	custom_url: 'www.givegiftr.co',
+	description: 'She likes cats',
+	custom_message: 'Need a gift for my friend'
+	)
+
+user_group = UserGroup.create!(
+	member: test_user,
+	group: group,
+	member_status: 'active',
+	member_notification: 'on'
+	)
+
+
+
