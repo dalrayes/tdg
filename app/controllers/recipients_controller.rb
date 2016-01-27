@@ -1,5 +1,5 @@
 class RecipientsController < ApplicationController
-	before_action :authenticate_user!
+	# before_action :authenticate_user!
 
   def new
   	@recipient = Recipient.new
@@ -19,6 +19,6 @@ class RecipientsController < ApplicationController
   private
 
   def recipient_params
-  	params.require(:recipient).permit(:giver_id, :name, :age, :gender, :relationship, occasions_attributes: [:recipient_id, :date, :occasion_type, :reminder])
+  	params.require(:recipient).permit(:giver_id, :name, :age, :gender, :relationship, occasions_attributes: [:recipient_id, :date, :occasion_type, :reminder, groups_attributes: [:owner_id, :occasion_id, :group_status, :custom_url, :description]])
   end
 end
