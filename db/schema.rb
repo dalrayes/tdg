@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20160125161046) do
     t.integer  "member_id"
     t.integer  "group_id"
     t.string   "member_status"
-    t.string   "member_notication"
+    t.string   "member_notification"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
