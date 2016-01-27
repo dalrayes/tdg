@@ -6,7 +6,6 @@ class CreateGroups < ActiveRecord::Migration
       t.string :group_status
       t.string :custom_url
       t.text :description
-      t.text :custom_message
 
       t.timestamps
     end
