@@ -10,8 +10,13 @@ html[lang="en"]
     = csrf_meta_tags
   body
     = render partial: 'layouts/navbar'
-    p.notice
+    /p.notice
       = notice
-    p.alert
+    /p.alert
       = alert
-    = yield
+    - if user_signed_in? 
+      = render partial: 'layouts/sidebar'
+    - else
+      .wrapper
+        = yield
+    = render partial: 'layouts/footer'

@@ -1,31 +1,99 @@
 //Global
+$pearl: #f8f5f2;
+$black: #020509;
 
-.button.radius, .button.radius {
-    border-radius: 3px;
+$lapis: #556dac;
+$salmon: #f79b77;
+$peppercorn: #755248;
+$stoneground: #4b4345;
+
+$lightblue: #0066ff;//Giftr logo color
+$blue: #000066;//Giftr logo color
+
+//Foundation Colors
+$secondary-color: #777;
+$success-color: #3adb76;
+$warning-color: #ffae00;
+$alert-color: #ec5840;
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$black: #0a0a0a;
+$white: #fefefe;
+
+.jumbotron {
+  padding: 3rem;
 }
-.button.round, .button.round {
-    border-radius: 1000px;
+.wrapper {
+  min-height: 100vh;
+  padding-top: 67px;
+}
+@media screen and (max-width: 39.9375em) {
+  .jumbotron {
+    padding: 1.875rem .938rem;
+  }
+  .wrapper {
+    padding-top: 41px;//navbar
+    margin-top: -41px;//navbar
+  }
 }
 .margin-left {
   margin-left: 1em;
 }
+.w500 {
+  font-weight: 600;
+}
+.white {
+  color: $white;
+}
+.lightblue {
+  color: $lightblue;
+}
+.blue {
+  color: $blue;
+}
 .medium-gray {
-  color: #cacaca;
+  color: $medium-gray;
 }
 .dark-gray {
-  color: #8a8a8a;
+  color: $dark-gray;
 }
-
-//Custom
-.test {
-  color: gray;
+.pearl {
+  color: $pearl;
+}
+.black {
+  color: $black;
+}
+.lapis {
+  color: $lapis;
+}
+.salmon {
+  color: $salmon;
+}
+.peppercorn {
+  color: $peppercorn;
+}
+.stonegroud {
+  color: $stoneground;
+}
+.button.radius {
+    border-radius: 3px;
 }
 
 //Navbar
+nav.row {
+  max-width: none;
+}
+nav.column {
+  position: fixed;
+  top: 0;
+  z-index: 1030;
+  padding: 0;
+   -webkit-box-shadow: 0px 1px 3px 0px rgba($peppercorn, .50);
+  -moz-box-shadow: 0px 1px 3px 0px rgba($peppercorn, .50);
+  box-shadow: 0px 1px 3px 0px rgba($peppercorn, .50);
+}
 .top-bar {
-  -webkit-box-shadow: 0px 2px 5px 0px #e6e6e6;//medium gray
--moz-box-shadow: 0px 2px 5px 0px #e6e6e6;
-box-shadow: 0px 2px 5px 0px #e6e6e6;
   font-size: .9rem;
 }
 .top-bar a.white {
@@ -36,8 +104,8 @@ box-shadow: 0px 2px 5px 0px #e6e6e6;
 }
 .top-bar-left ul li:first-child a {
   height: 100%;
-}
-@-moz-document url-prefix() {
+} 
+@-moz-document url-prefix() {//logo correct size
     .top-bar img {
       max-height: 50%;
       width: 50%;
@@ -46,4 +114,140 @@ box-shadow: 0px 2px 5px 0px #e6e6e6;
 .top-bar-right ul {
   padding: 0.35rem 0.35rem;
   line-height: 1;
+}
+.title-bar {
+  background-color: white;
+  font-size: .9rem;
+}
+.title-bar .menu-icon {
+  top: 4px;//vertical align off when float-left
+}
+.title-bar .menu-icon:after {
+  background: $lapis;
+}
+.title-bar .menu-icon::after {
+  box-shadow: 0 7px 0 $lapis, 0 14px 0 $lapis;
+}
+.title-bar img {
+  max-height: 25px;
+}
+.title-bar ul {
+  display: inline-block;
+  float: right;
+}
+.title-bar ul li .button {
+  padding: 0.45rem 1rem;
+}
+.title-bar ul li:not(.menu-text) > a {
+  padding: 0.35rem 1rem;
+}
+
+//Sidebar
+ul.mobile-ofc.vertical.menu li:last-child {
+  border-bottom: 1px solid $lightblue;
+}
+
+//Index
+.index.imagecover {
+  background-image: image-url("Bear.jpg");
+//  background-image: url("https://s3.amazonaws.com/giftrassets/LandingPage/Giftr_coverphoto.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom  ;
+  position: relative;
+  margin-top: -67px;//navbar height
+}
+.index .centered {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+}
+.index .centered .row .button {
+  margin: 0 auto;
+  display: block;
+}
+.index .jumbotron {
+  padding-top: 115px;//adjust for navbar
+}
+.index .jumbotron>div {
+  background-color: rgba($peppercorn, 0.65);
+  padding: 2rem;
+  margin-top: 4rem;
+  border-radius: 3px;
+}
+@media screen and (max-width: 39.9375em) {
+  .index.imagecover {
+    margin-top: -41px;//navbar height
+  }
+  .index .jumbotron {
+    padding-top: 0px;//adjust for navbar
+  }
+}
+//Footer
+.footer {
+  background-color: darken( $stoneground, 15% );
+  color: $medium-gray;
+  font-size: 80%;
+  padding: 1rem;
+}
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+.list-inline li {
+  display: inline-block;
+  padding: 0 5px;
+  margin: 1rem 0 1rem;
+}
+.social-icons .fa {
+  font-size: 1.8em;
+  width: 1.6em;
+  height: 1.6em;
+  line-height: 1.6em;
+  text-align: center;
+  color: #FFF;
+  color: rgba(255, 255, 255, 0.8);
+}
+.social-icons.icon-rounded .fa{
+  border-radius: 3px;
+}
+.social-icons .fa:hover, .social-icons .fa:active {
+  color: #FFF;
+  -webkit-box-shadow: 1px 1px 3px #333;
+  -moz-box-shadow: 1px 1px 3px #333;
+  box-shadow: 1px 1px 3px #333; 
+}
+.social-icons .fa-facebook {
+  background-color: #3c599f;
+}
+.social-icons .fa-twitter {
+  background-color: #00aced;
+}
+.social-icons .fa-youtube {
+  background-color: #C52F30;
+}
+.social-icons .fa-google-plus {
+  background-color: #CF3D2E;
+}
+.social-icons .fa-envelope {
+  background-color: #229ACC;
+}
+@media screen and (max-width: 39.9375em) {
+  .social-icons .fa {
+    font-size: 1.4em;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+  }
+}
+body, nav { 
+  min-width: 319px;
+}
+@media screen and (max-width: 39.9375em) {
+  nav.column {
+    position: relative;
+  }
 }
