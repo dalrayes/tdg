@@ -1,0 +1,34 @@
+= render 'devise/join_or_log_in'
+= render 'occasions/new'
+
+= form_for @recipient do |f|
+	.field
+		= f.label "Recipient name"
+		= f.text_field :name
+	.field
+		= f.label "Age"
+		= f.text_field :age
+	.field
+	 	= f.radio_button :gender, 'male'
+	 	= f.label "Male"
+	 	= f.radio_button :gender, 'female'
+	 	= f.label "Female"
+	 	= f.radio_button :gender, 'other'
+	 	= f.label "Other"
+	.field
+		= f.label "Relationship"
+		= f.select :relationship, options_for_select(relationship)
+
+	.field
+		= f.fields_for :occasions do |occasions_form|
+			= occasions_form.label 'Date Gift is Required'
+			= occasions_form.date_field :date
+
+			= occasions_form.label 'Type of occasion'
+			= occasions_form.select :occasion_type, options_for_select(occasion)
+
+			= occasions_form.check_box :reminder
+			= occasions_form.label 'Please send me a reminder'
+
+	.field
+		= f.submit 'Next: Create a Group'
