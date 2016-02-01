@@ -83,12 +83,19 @@ $white: #fefefe;
     margin-top: 0;
     margin-bottom: 0;
 }
+.zerolrmargin {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
 .zerolrpadding{
   padding-left: 0;
   padding-right: 0;
 }
 .whitebtn {
     color: $pearl !important;
+}
+.nomaxwidth {
+  max-width: 200rem;
 }
 
 //Navbar
@@ -157,18 +164,34 @@ nav.column {
   background-color: $light-gray;
   min-height: 100vh;
   margin-top: -67px;//adjust topbar
-//  width: 
+  max-width: 105px; 
 }
 .lgsidebar>div {
   padding-top: 67px;//adjust topbar
 }
-ul.mobile-ofc.vertical.menu li:last-child {
-    //  border-bottom: 1px solid $lightblue;
+.wrapper > .row > .columns > .row{
+  margin: 0;
+}
+.sidebarli i, .sidebarli span {
+  display: block;
+  text-align: center;
+}
+.sidebarli li {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+ul.mobile-ofc.vertical.menu, .lgsidebar {
+  border-right: 1px solid $medium-gray;
+}
+ul.mobile-ofc.vertical.menu li, .lgsidebar li {
+  border-top: 1px solid $medium-gray;
     }
 @media screen and (min-width: 39.9375em) {
-    .off-canvas-wrapper {
-//        display: none;
-    }
+}
+@media screen and (min-width: 75em) {
+  .wrapper > .row > .columns > .row{
+    margin: 0 auto;
+  }
 }
 
 //Index
