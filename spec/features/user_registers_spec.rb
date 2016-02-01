@@ -15,8 +15,6 @@ feature "User Registers" do
 		choose('user_gender_female')
 		check("Please send me updates about Giftr")
 		click_button "Start Gifting"
-		# expect(current_path).to eq(new_group_path)
-		# expect(page).to have_content " "
-    # expect(page).to have_content " "
+    expect(page).to have_content("Logged in as")
 	end
 end

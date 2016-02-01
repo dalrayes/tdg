@@ -1,19 +1,21 @@
 class RecipientsController < ApplicationController
-	# before_action :authenticate_user!
+	before_action :authenticate_user!
 
   def index
   end
 
   def new
   	@recipient = Recipient.new
-  	@recipient.occasions.new
+  	@occasion= @recipient.occasions.new
   end
   
   def create
   	@recipient = current_user.recipients.new(recipient_params)
 
   	if @recipient.save
-  		redirect_to groups_path
+      @occasion = @recipient.occasions.last
+      @group = @occasion.groups.create(owner:current_user)
+  		redirect_to group_path(@group)
   	else
   		render action: :new
   	end
