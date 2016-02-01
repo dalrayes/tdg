@@ -160,11 +160,11 @@ nav.column {
 //endregion
 
 //Sidebar
+//region
 .lgsidebar {
   background-color: $light-gray;
   min-height: 100vh;
   margin-top: -67px;//adjust topbar
-  max-width: 105px; 
 }
 .lgsidebar>div {
   padding-top: 67px;//adjust topbar
@@ -172,6 +172,12 @@ nav.column {
 .wrapper > .row > .columns > .row{
   margin: 0;
 }
+ul.mobile-ofc.vertical.menu, .lgsidebar {
+  border-right: 1px solid $medium-gray;
+}
+ul.mobile-ofc.vertical.menu li, .lgsidebar li {
+  border-top: 1px solid $medium-gray;
+    }
 .sidebarli i, .sidebarli span {
   display: block;
   text-align: center;
@@ -180,19 +186,24 @@ nav.column {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-ul.mobile-ofc.vertical.menu, .lgsidebar {
-  border-right: 1px solid $medium-gray;
+.sidebarli li:hover {
+  background-color: $pearl;
 }
-ul.mobile-ofc.vertical.menu li, .lgsidebar li {
-  border-top: 1px solid $medium-gray;
-    }
 @media screen and (min-width: 39.9375em) {
+  .lgsidebar {
+    max-width: 105px; 
+    position: absolute;
+  }
+  .fixed-width-left {
+    padding-left: 105px;
+  }
 }
 @media screen and (min-width: 75em) {
   .wrapper > .row > .columns > .row{
     margin: 0 auto;
   }
 }
+//endregion
 
 //Index
 //region
@@ -295,7 +306,6 @@ ul.mobile-ofc.vertical.menu li, .lgsidebar li {
   }
 }
 //endregion
-
 
 //Adjustment for min-screen width
 body, nav { 
