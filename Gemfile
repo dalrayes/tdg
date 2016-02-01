@@ -16,14 +16,17 @@ gem 'slim-rails'
 gem 'font-awesome-rails'
 gem 'devise'
 
+group :development do
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+end
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
  	gem 'shoulda-matchers', '~> 3.1'
 end
 
-group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
+group :test do
+	gem 'capybara'
 end
 
