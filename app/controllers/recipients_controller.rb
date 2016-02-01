@@ -1,6 +1,9 @@
 class RecipientsController < ApplicationController
 	# before_action :authenticate_user!
 
+  def index
+  end
+
   def new
   	@recipient = Recipient.new
   	@recipient.occasions.new
