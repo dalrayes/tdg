@@ -73,11 +73,18 @@ $white: #fefefe;
 .peppercorn {
   color: $peppercorn;
 }
-.stonegroud {
+.stoneground {
   color: $stoneground;
 }
 .button.radius {
     border-radius: 3px;
+}
+.zerotbmargin {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.whitebtn {
+    color: $pearl !important;
 }
 
 //Navbar
@@ -95,9 +102,6 @@ nav.column {
 }
 .top-bar {
   font-size: .9rem;
-}
-.top-bar a.white {
-  color: white; 
 }
 .top-bar img {
   max-height: 50%;
@@ -141,6 +145,9 @@ nav.column {
 .title-bar ul li:not(.menu-text) > a {
   padding: 0.35rem 1rem;
 }
+.top-bar-left>ul>li:nth-child(2) {
+    color: red !important;
+}
 
 //Sidebar
 ul.mobile-ofc.vertical.menu li:last-child {
@@ -150,7 +157,7 @@ ul.mobile-ofc.vertical.menu li:last-child {
 //Index
 .index.imagecover {
   background-image: image-url("Bear.jpg");
-//  background-image: url("https://s3.amazonaws.com/giftrassets/LandingPage/Giftr_coverphoto.jpg");
+//  background-image: url("https://s3.amazonaws.com/giftrassets/LandingPage/Bear_large.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom  ;
@@ -172,7 +179,7 @@ ul.mobile-ofc.vertical.menu li:last-child {
   padding-top: 115px;//adjust for navbar
 }
 .index .jumbotron>div {
-  background-color: rgba($peppercorn, 0.65);
+  background-color: rgba($pearl, 0.5);
   padding: 2rem;
   margin-top: 4rem;
   border-radius: 3px;
