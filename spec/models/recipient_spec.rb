@@ -1,5 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe Recipient, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Recipient do
+	it {should belong_to(:giver).class_name('User') }
+	it {should have_many(:occasions)}
+	it {should accept_nested_attributes_for(:occasions)}
 end
