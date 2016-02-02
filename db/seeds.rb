@@ -37,7 +37,7 @@ group= Group.create!(
 	group_status: 'open',
 	custom_url: 'www.givegiftr.co',
 	description: 'She likes cats',
-	custom_message: 'Need a gift for my friend'
+#	custom_message: 'Need a gift for my friend'
 	)
 
 user_group = UserGroup.create!(
