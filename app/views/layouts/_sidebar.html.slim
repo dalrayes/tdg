@@ -1,15 +1,17 @@
+//Mobile sidebar
 .off-canvas-wrapper
-  .off-canvas-wrapper-inner[data-off-canvas-wrapper]
-    .off-canvas.position-left[id="offCanvas", data-off-canvas]
+  .off-canvas-wrapper-inner[data-off-canvas-wrapper data-equalizer="foo"]
+    .off-canvas.position-left[id="offCanvas" data-off-canvas data-equalizer-watch="foo"]
       ul.mobile-ofc.vertical.menu
-        li
-          a href="#"
-            | Home
-        li
-          a href="#"
-            | About
-        li
-          = link_to 'Sign Out', destroy_user_session_path, method: :delete 
-    .off-canvas-content[data-off-canvas-content]
+        =render partial: 'layouts/sidebarli' 
+    .off-canvas-content[data-off-canvas-content data-equalizer-watch="foo"]
       .wrapper
-        = yield
+        //MD and LG sidebar
+        .row.nomaxwidth[data-equalizer data-equalize-on="medium"]
+          .columns.show-for-medium.lgsidebar.zerolrpadding.fixed-width
+            div[data-equalizer-watch]
+              ul.menu.vertical
+                =render partial: 'layouts/sidebarli'
+          .columns.zerolrpadding.fixed-width-left
+            .row[data-equalizer-watch]
+              = yield

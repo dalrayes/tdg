@@ -1,0 +1,21 @@
+.sidebarli
+  li  
+    a[href="#"]
+      i.fa.fa-calendar-o.fa-2x
+      span
+        | Occasions
+  li  
+    a[href="#"]
+      i.fa.fa-users.fa-2x
+      span
+        | Groups
+  li
+    = link_to edit_user_registration_path do
+      i.fa.fa-cog.fa-2x
+      span 
+        | Settings
+  li  
+    = link_to destroy_user_session_path, method: :delete do
+      i.fa.fa-power-off.fa-2x
+      span
+        | Sign Out

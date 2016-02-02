@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20160125161046) do
     t.string   "group_status"
     t.string   "custom_url"
     t.text     "description"
-    t.text     "custom_message"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
