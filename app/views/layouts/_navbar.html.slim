@@ -3,6 +3,7 @@
   nav.column.row
     .title-bar.text-center.show-for-small-only[data-responsive-toggle="offCanvas" data-hide-for="medium"]
       button.menu-icon.float-left[type="button", data-toggle="offCanvas"]
+      //** change image link to go to logged-in home screen 
       = link_to root_path do
         = image_tag '/assets/Giftr_Logo.png'
       ul.menu.float-right
@@ -16,7 +17,7 @@
         = image_tag '/assets/Giftr_Logo.png'
       ul.menu
         li 
-          = link_to 'Join', new_user_registration_path, class: 'button small radius white'
+          = link_to 'Join', new_user_registration_path, class: 'button small radius whitebtn'
         li
           = link_to 'Log In', new_user_session_path, class: 'button hollow radius small margin-left'
 //large navbar
@@ -28,7 +29,7 @@ nav.column.row
           = link_to root_path do
             = image_tag '/assets/Giftr_Logo.png'
         li.has-submenu
-          a[href="#"]
+          a
             | Explore
           ul.submenu.menu.vertical[data-submenu]
             li
@@ -49,6 +50,6 @@ nav.column.row
               i.fa.fa-cog
         - else
           li 
-            = link_to 'Join', new_user_registration_path, class: 'button radius white'
+            = link_to 'Join', new_user_registration_path, class: 'button radius whitebtn'
           li
             = link_to 'Log In', new_user_session_path, class: 'button hollow radius margin-left'

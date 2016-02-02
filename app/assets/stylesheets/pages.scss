@@ -33,8 +33,8 @@ $white: #fefefe;
     padding: 1.875rem .938rem;
   }
   .wrapper {
-    padding-top: 41px;//navbar
-    margin-top: -41px;//navbar
+    padding-top: 41px;//navbar adjustment
+    margin-top: -41px;//navbar adjustment
   }
 }
 .margin-left {
@@ -73,14 +73,33 @@ $white: #fefefe;
 .peppercorn {
   color: $peppercorn;
 }
-.stonegroud {
+.stoneground {
   color: $stoneground;
 }
 .button.radius {
     border-radius: 3px;
 }
+.zerotbmargin {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.zerolrmargin {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.zerolrpadding{
+  padding-left: 0;
+  padding-right: 0;
+}
+.whitebtn {
+    color: $pearl !important;
+}
+.nomaxwidth {
+  max-width: 200rem;
+}
 
 //Navbar
+//region
 nav.row {
   max-width: none;
 }
@@ -95,9 +114,6 @@ nav.column {
 }
 .top-bar {
   font-size: .9rem;
-}
-.top-bar a.white {
-  color: white; 
 }
 .top-bar img {
   max-height: 50%;
@@ -141,16 +157,59 @@ nav.column {
 .title-bar ul li:not(.menu-text) > a {
   padding: 0.35rem 1rem;
 }
+//endregion
 
 //Sidebar
-ul.mobile-ofc.vertical.menu li:last-child {
-  border-bottom: 1px solid $lightblue;
+//region
+.lgsidebar {
+  background-color: $light-gray;
+  min-height: 100vh;
+  margin-top: -67px;//adjust topbar
 }
+.lgsidebar>div {
+  padding-top: 67px;//adjust topbar
+}
+.wrapper > .row > .columns > .row{
+  margin: 0;
+}
+ul.mobile-ofc.vertical.menu, .lgsidebar {
+  border-right: 1px solid $medium-gray;
+}
+ul.mobile-ofc.vertical.menu li, .lgsidebar li {
+  border-top: 1px solid $medium-gray;
+    }
+.sidebarli i, .sidebarli span {
+  display: block;
+  text-align: center;
+}
+.sidebarli li {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.sidebarli li:hover {
+  background-color: $pearl;
+}
+@media screen and (min-width: 39.9375em) {
+  .lgsidebar {
+    max-width: 105px; 
+    position: absolute;
+  }
+  .fixed-width-left {
+    padding-left: 105px;
+  }
+}
+@media screen and (min-width: 75em) {
+  .wrapper > .row > .columns > .row{
+    margin: 0 auto;
+  }
+}
+//endregion
 
 //Index
+//region
 .index.imagecover {
   background-image: image-url("Bear.jpg");
-//  background-image: url("https://s3.amazonaws.com/giftrassets/LandingPage/Giftr_coverphoto.jpg");
+//  background-image: url("https://s3.amazonaws.com/giftrassets/LandingPage/Bear_large.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom  ;
@@ -172,7 +231,7 @@ ul.mobile-ofc.vertical.menu li:last-child {
   padding-top: 115px;//adjust for navbar
 }
 .index .jumbotron>div {
-  background-color: rgba($peppercorn, 0.65);
+  background-color: rgba($pearl, 0.5);
   padding: 2rem;
   margin-top: 4rem;
   border-radius: 3px;
@@ -185,7 +244,10 @@ ul.mobile-ofc.vertical.menu li:last-child {
     padding-top: 0px;//adjust for navbar
   }
 }
+//endregion
+
 //Footer
+//region
 .footer {
   background-color: darken( $stoneground, 15% );
   color: $medium-gray;
@@ -243,6 +305,9 @@ ul.mobile-ofc.vertical.menu li:last-child {
     line-height: 1.5em;
   }
 }
+//endregion
+
+//Adjustment for min-screen width
 body, nav { 
   min-width: 319px;
 }
