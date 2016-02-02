@@ -157,28 +157,18 @@ nav.column {
 .title-bar ul li:not(.menu-text) > a {
   padding: 0.35rem 1rem;
 }
-<<<<<<< e574c59ea0e11a18931fd97f6604631427411035
-
-//Sidebar
-//region
-=======
 //endregion
 
 //Sidebar
->>>>>>> sidebar mobile and large
+//region
 .lgsidebar {
   background-color: $light-gray;
   min-height: 100vh;
   margin-top: -67px;//adjust topbar
-<<<<<<< e574c59ea0e11a18931fd97f6604631427411035
-=======
-//  width: 
->>>>>>> sidebar mobile and large
 }
 .lgsidebar>div {
   padding-top: 67px;//adjust topbar
 }
-<<<<<<< e574c59ea0e11a18931fd97f6604631427411035
 .wrapper > .row > .columns > .row{
   margin: 0;
 }
@@ -195,15 +185,6 @@ ul.mobile-ofc.vertical.menu li, .lgsidebar li {
 .sidebarli li {
   padding-top: 1rem;
   padding-bottom: 1rem;
-=======
-ul.mobile-ofc.vertical.menu li:last-child {
-    //  border-bottom: 1px solid $lightblue;
-    }
-@media screen and (min-width: 39.9375em) {
-    .off-canvas-wrapper {
-//        display: none;
-    }
->>>>>>> sidebar mobile and large
 }
 .sidebarli li:hover {
   background-color: $pearl;
@@ -326,10 +307,6 @@ ul.mobile-ofc.vertical.menu li:last-child {
 }
 //endregion
 
-<<<<<<< e574c59ea0e11a18931fd97f6604631427411035
-=======
-
->>>>>>> sidebar mobile and large
 //Adjustment for min-screen width
 body, nav { 
   min-width: 319px;
